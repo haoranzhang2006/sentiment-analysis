@@ -7,7 +7,7 @@ import tensorflow as tf
 
 # 1. 加载数据
 df = pd.read_csv("imdb_top_500.csv")
-texts = df["review"].values
+texts = df["text"].values
 labels = df["sentiment"].map({"positive": 1, "negative": 0}).values
 
 # 2. 加载 tiny_glove 词向量
